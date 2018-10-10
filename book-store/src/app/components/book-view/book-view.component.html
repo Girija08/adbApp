@@ -1,0 +1,31 @@
+<h3>Book Details</h3>
+<table>
+  <tr>
+    <th>Book #</th>
+    <td>{{book.bcode}}</td>
+  </tr>
+  <tr>
+    <th>Book Title</th>
+    <td>{{book.title}}</td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td>{{book.price}}</td>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <td>{{book.category}}</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>{{book.type}}</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:right">
+      <button (click)="doEdit()">Edit</button>
+      <button (click)="doDelete()">Delete</button>
+    </td>
+  </tr>
+
+</table>
+

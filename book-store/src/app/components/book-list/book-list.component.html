@@ -1,0 +1,27 @@
+<h3>Book list</h3>
+<div class="dashboard">
+  <div>
+      <img [src]="bookIcon"/>
+      HardCopies: <span>{{books|typeCount:'HardCopy'}}/{{books.length}}</span>
+    </div>
+  <div>
+      <img [src]="cdIcon"/>
+    Digital Copies: <span>{{books|typeCount:'Digital'}}/{{books.length}}</span></div>
+</div>
+
+<div class="booksList">
+    <div class="bookCard" *ngFor="let b of books" (click)="showBook(b.bcode)">
+      <div class="typeIcon">
+          <img [src]="b.type=='HardCopy'?bookIcon:cdIcon"/>
+      </div>
+      <div class="bookDetails">
+      <span>{{b.bcode}}</span>
+      <span>{{b.title}}</span>
+      <span>{{b.price}}</span>
+      <span>{{b.category}}</span>
+      <span>{{b.type}}</span>
+    </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
